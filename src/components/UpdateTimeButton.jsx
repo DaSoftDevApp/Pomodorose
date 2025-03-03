@@ -12,8 +12,9 @@ export default function UpdateTimeButton({ sign, type }) {
   return (
     <button
       onClick={handleUpdate}
-      className='w-8 h-8 text-4xl text-slate-700 bg-slate-200 rounded flex justify-center items-center'>
-      <span className='relative bottom-1 pointer-events-none'>{sign}</span>
+      className="w-8 h-8 rounded-full flex items-center justify-center bg-rose text-white hover:bg-rose-dark transition-colors"
+    >
+      {sign}
     </button>
   )
 }
