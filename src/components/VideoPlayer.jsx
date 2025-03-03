@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 function VideoPlayer() {
-    const [videoUrl, setVideoUrl] = useState('');
+    const [videoUrl, setVideoUrl] = useState('https://www.youtube.com/watch?v=ul8NcakAj6Y&ab_channel=StudyPomodoro');
     const [player, setPlayer] = useState(null);
     const [isReady, setIsReady] = useState(false);
     const [volume, setVolume] = useState(50); // Default volume at 50%
@@ -38,7 +38,7 @@ function VideoPlayer() {
         const newPlayer = new window.YT.Player('youtube-player', {
             height: '315',
             width: '560',
-            videoId: videoId,
+            videoId: 'ul8NcakAj6Y',
             events: {
                 'onReady': onPlayerReady,
                 'onStateChange': onPlayerStateChange
