@@ -5,6 +5,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        alex: ['AlexBrush', 'cursive']
+      },
       colors: {
         rose: {
           light: '#FFE4E6',

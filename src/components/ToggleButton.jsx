@@ -1,7 +1,6 @@
-import play from "../assets/play-button.svg"
-import reset from "../assets/reset.svg"
 import { useDispatch, useSelector } from "react-redux"
 import { startChrono, resetChrono } from "../features/chrono"
+import Button from '@mui/material/Button';
 
 export default function ToggleButton() {
   const dispatch = useDispatch()
@@ -15,11 +14,14 @@ export default function ToggleButton() {
     }
   }
   return (
-    <button
+    <Button
+      variant="contained"
       onClick={toggleChrono}
-      className="bg-rose hover:bg-rose-dark text-white font-medium px-8 py-3 rounded-full transition-colors shadow-lg hover:shadow-xl"
+      className="!bg-rose-400 hover:!bg-rose-500 text-white font-medium px-8 py-3 rounded-full"
     >
       {chronoValues.isPlaying ? "Pause" : "Start"}
-    </button>
+    </Button>
   )
 }
+
+// className="bg-rose hover:bg-rose-dark text-white font-medium px-8 py-3 rounded-full transition-colors shadow-lg hover:shadow-xl"

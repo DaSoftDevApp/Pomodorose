@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
+import { Button } from '@mui/material';
 
 function VideoPlayer() {
     const [videoUrl, setVideoUrl] = useState('https://www.youtube.com/watch?v=7JhIMXVC0Dg&ab_channel=StudyPomodoro');
@@ -97,12 +98,19 @@ function VideoPlayer() {
                     placeholder="Enter YouTube URL"
                     className="px-4 py-2 rounded-lg border border-rose/20 text-rose-dark w-full max-w-md focus:outline-none focus:border-rose focus:ring-2 focus:ring-rose/20"
                 />
-                <button
+                <Button
+                    type="submit"
+                    variant='contained'
+                    className="!bg-rose-400 hover:!bg-rose-500 text-white px-4 py-2 rounded-lg transition-colors"
+                >
+                    Load Video
+                </Button>
+                {/* <button
                     type="submit"
                     className="bg-rose text-white px-4 py-2 rounded-lg hover:bg-rose-dark transition-colors"
                 >
                     Load Video
-                </button>
+                </button> */}
             </form>
 
             <div className="flex justify-center">
