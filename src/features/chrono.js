@@ -37,7 +37,10 @@ export const chrono = createSlice({
         }
       }
       else if (action.payload.type === "pause") {
+        //Test MAJ chrono
         chosenState.value = chosenState.value + action.payload.value
+        if (!state.isPlaying)
+          chosenState.runningValue = chosenState.runningValue + action.payload.value;
       }
     },
     tick: (state, action) => {
@@ -45,11 +48,22 @@ export const chrono = createSlice({
         state.session.runningValue--
         state.displayedValue.value = state.session.runningValue
         state.displayedValue.heading = "Work"
+        if (state.session.runningValue === 0) {
+          state.isPlaying = false
+          const audio = new Audio("/src/assets/pause_song.mp3")
+          audio.play()
+          setTimeout(() => {
+            audio.pause();
+            audio.currentTime = 0; // Revenir au début du son
+          }, 3000);
+        }
       }
       else if (state.pause.runningValue > 0) {
         state.pause.runningValue--
         state.displayedValue.value = state.pause.runningValue
         state.displayedValue.heading = "Pause"
+        if (state.pause.runningValue === 0)
+          state.isPlaying = true
       }
       else {
         state.cycles++
