@@ -50,7 +50,7 @@ export const chrono = createSlice({
         state.displayedValue.heading = "Work"
         if (state.session.runningValue === 0) {
           state.isPlaying = false
-          const audio = new Audio("/src/assets/pause_song.mp3")
+          const audio = new Audio("/sounds/pause_song.mp3")
           audio.play()
           setTimeout(() => {
             audio.pause();
