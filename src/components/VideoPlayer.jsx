@@ -96,7 +96,7 @@ function VideoPlayer() {
                     value={videoUrl}
                     onChange={(e) => setVideoUrl(e.target.value)}
                     placeholder="Enter YouTube URL"
-                    className="px-4 py-2 rounded-lg border border-rose/20 text-rose-dark w-full max-w-md focus:outline-none focus:border-rose focus:ring-2 focus:ring-rose/20"
+                    className="px-4 py-2 rounded-lg border border-rose/20 text-rose w-full max-w-md focus:outline-none focus:border-rose focus:ring-2 focus:ring-rose/20"
                 />
                 <Button
                     type="submit"

@@ -14,7 +14,7 @@ function App() {
     <div className="min-h-screen bg-gradient-to-br from-rose-light via-cream to-rose-dark p-8">
       <div className="max-w-2xl mx-auto">
         {/* Header */}
-        <h1 className="font-alex text-6xl text-center italic text-rose-dark mb-2">
+        <h1 className="font-alex text-6xl text-center  text-rose-dark mb-2">
           Pomodorose
         </h1>
         <p className="font-alex text-3xl text-center text-rose mb-12 font-light">
@@ -27,7 +27,7 @@ function App() {
           <div className="flex justify-center gap-16 mb-12">
             {/* Session block */}
             <div className="text-center">
-              <p className="mb-3 text-rose-dark font-medium">Work Session Time</p>
+              <p className="mb-3 text-rose font-medium">Work Session Time</p>
               <div className="flex items-center bg-rose-light/50 rounded-lg p-2">
                 <UpdateTimeButton sign={"-"} type={"session"} />
                 <p className="mx-4 text-2xl text-rose-dark font-semibold min-w-[40px]">
@@ -39,7 +39,7 @@ function App() {
 
             {/* Pauses block */}
             <div className="text-center">
-              <p className="mb-3 text-rose-dark font-medium">Break Time</p>
+              <p className="mb-3 text-rose font-medium">Break Time</p>
               <div className="flex items-center bg-rose-light/50 rounded-lg p-2">
                 <UpdateTimeButton sign={"-"} type={"pause"} />
                 <p className="mx-4 text-2xl text-rose-dark font-semibold min-w-[40px]">
@@ -56,7 +56,7 @@ function App() {
               <RoseDroite className="text-blue-500 w-20 h-32" />
             </div>
             <div>
-              <p className="text-xl text-rose-dark mb-4">
+              <p className="text-xl text-rose mb-4 font-medium">
                 {chronoValues.displayedValue.heading}
               </p>
               <div className="inline-block bg-white rounded-2xl p-6 shadow-inner-rose">
